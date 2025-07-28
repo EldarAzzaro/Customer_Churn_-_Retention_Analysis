@@ -119,7 +119,7 @@ The dataset used for this project is the **Telco Customer Churn** data from Kagg
 ### 1. Schema & Dictionary Tables
 
 
-```
+```sql
 CREATE TABLE customers_raw (
   CustomerID        VARCHAR(50),   
   Gender            VARCHAR(10),    
@@ -174,7 +174,7 @@ WHERE Contract IS NOT NULL
 
 ### 2. Core KPI Views
 
-```
+```sql
 -- Churn analysis by tenure
 
 CREATE VIEW vw_churn_trend AS
@@ -226,7 +226,7 @@ ORDER BY Tenure;
 
 ### 3. Sample Analytics Queries (Metrics)
 
-```
+```sql
 -- ARPU (Average Revenue Per User)
 
 SELECT ROUND(AVG(MonthlyCharges), 2) AS ARPU
